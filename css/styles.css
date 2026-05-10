@@ -630,3 +630,77 @@ footer {
   color: var(--bg-color);
   border-color: var(--text-color);
 }
+
+/* Comprehensive Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    padding: 1rem 5%;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  /* Typography */
+  .title {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 15vw; /* Make hero text impactful on mobile */
+    margin-top: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  /* Layout Paddings */
+  .products, .info-section, .page-header {
+    padding: 4rem 5% 2rem;
+  }
+  
+  main[style*="padding-top: 100px;"] {
+    padding-top: 140px !important; /* Account for taller nav */
+  }
+
+  /* Product Grid */
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 1.5rem;
+  }
+
+  .product-img {
+    height: 350px; 
+  }
+
+  /* Banner Grid */
+  .banner-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .banner {
+    height: 180px;
+  }
+
+  /* Filter Buttons */
+  .section-header div {
+    gap: 0.5rem !important;
+  }
+  
+  .section-header .btn-outline {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem;
+    flex: 1 1 calc(50% - 0.5rem); /* Two buttons per row */
+    text-align: center;
+  }
+}
